@@ -1,0 +1,31 @@
+Repository Name:    PrOS_Hack'nSlash
+
+Create new Branch, if you are going to code new things.
+
+If you are going to create new features create a new issue. There you choose a title wich describe you're new feature.
+In the description you give a little Overview what the problem is or what you are going to do.
+Tip: Make checklists with "- [ ] Bla Bla" so the other developers can see what you want to achieve and what you have achieved yet.
+Then add a Label to you're issue which describes your work on a specific section. Like "UI, AI, Level-Design etc" and assign yourself or another developer to it.
+After your title you see a number. This is your issuenumber.
+
+When you want to start with your work create a new Branch:
+
+Branchnaming:       Issuenumber_Featurename
+
+Then you can work localy on the files.
+
+If you are finished with your work on a specific task in your feature you can commit.
+
+Commitname:         #IssueNumber. changes
+Commitdescription:  Describe your changes
+
+When you are finished with your feature, you can create a pull request.
+
+Pull-Request-Name:  (Label): #IssueNumber. Issuenanme 
+
+After that in github online you can see your new Pull-Request in the Pull-Request Tab. Go to your Pull request and connect it with your issue.
+Then at the right side assign a Reviewer to your Pull-Request. After that tell him, if he doesn't saw it directly in his notifications.
+The Reviewer can now approve your changes or give you some feedback what you should change ("Changes Requested")
+Are all changes approved we can merge your branch into the master branch. 
+
+After that the other developers can pull your changes localy into their branch, so they have you're changes also in it.
