@@ -1,6 +1,15 @@
 extends KinematicBody2D
 
 var sprite_node
+var lbl_Cooldown = null
+var label = null
+
+var timer_DashTime = null
+var timer_DashCD = null
+var dash_time = 0.075
+var dash_cooldown = 5
+var isDashing = false
+var canDash = true
 
 var input_direction = 0
 var direction = 1
@@ -8,7 +17,9 @@ var direction = 1
 var speed = Vector2()
 var velocity = Vector2()
 
+const DASH_SPEED = 5000
 const MAX_SPEED = 600
+const DASH_RANGE = 10
 const ACCELERATION = 2600
 const DECELERATION = 5000
 
@@ -24,18 +35,39 @@ func _ready():
 	set_process(true)
 	set_process_input(true)
 	sprite_node = get_node("Sprite")
+	# How long the Player is dashing
+	timer_DashTime = Timer.new()
+	timer_DashTime.set_one_shot(true)
+	timer_DashTime.set_wait_time(dash_time)
+	timer_DashTime.connect("timeout", self, "on_timeout_complete")
+	add_child(timer_DashTime)
+	# Cooldown for dash
+	timer_DashCD = Timer.new()
+	timer_DashCD.set_one_shot(true)
+	timer_DashCD.set_wait_time(dash_cooldown)
+	timer_DashCD.connect("timeout", self, "CD_on_timeout_complete")
+	add_child(timer_DashCD)
+	# Label
+	label = get_node("Label")
+	label.set_text("Cooldown")
 
+
+ # Whem the timers timeout completes
+func on_timeout_complete():
+	isDashing = false
+
+func CD_on_timeout_complete():
+	canDash = true
 
 func _input(event):
 	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed("jump"):
 		speed.y = -JUMP_FORCE
 		jump_count += 1
 
-
 func _process(delta):
 	if input_direction:
 		direction = input_direction
-	
+		
 	if Input.is_action_pressed("move_left"):
 		input_direction = -1
 		sprite_node.set_flip_h(true)
@@ -44,19 +76,35 @@ func _process(delta):
 		sprite_node.set_flip_h(false)
 	else:
 		input_direction = 0
+		
+	if Input.is_action_pressed("dash") && isDashing == false && canDash == true:
+		if(sprite_node.is_flipped_h()):
+			#TODO
+			# Fix the to left side
+			speed.x -= DASH_RANGE * ACCELERATION
+			speed.x = clamp(speed.x, 0, DASH_SPEED)
+		elif(!sprite_node.is_flipped_h()):
+			speed.x += DASH_RANGE * ACCELERATION
+			speed.x = clamp(speed.x, 0, DASH_SPEED)
+		isDashing = true
+		canDash = false
+		timer_DashCD.start()
+		timer_DashTime.start()
+		
+	if(!isDashing):
+		if input_direction == - direction:
+			speed.x /= 3
+		if input_direction:
+			speed.x += ACCELERATION * delta
+		else:
+			speed.x -= DECELERATION * delta
+		speed.x = clamp(speed.x, 0, MAX_SPEED)
 	
-	if input_direction == - direction:
-		speed.x /= 3
-	if input_direction:
-		speed.x += ACCELERATION * delta
-	else:
-		speed.x -= DECELERATION * delta
-	speed.x = clamp(speed.x, 0, MAX_SPEED)
+		speed.y += GRAVITY * delta
+		if speed.y > MAX_FALL_SPEED:
+			speed.y = MAX_FALL_SPEED
 	
-	speed.y += GRAVITY * delta
-	if speed.y > MAX_FALL_SPEED:
-		speed.y = MAX_FALL_SPEED
-	
+	label.set_text(str(timer_DashCD.get_time_left()))
 	velocity = Vector2(speed.x * delta * direction, speed.y * delta)
 	var movement_remainder = move(velocity)
 	
