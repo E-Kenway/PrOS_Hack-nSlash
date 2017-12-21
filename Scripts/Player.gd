@@ -8,7 +8,7 @@ var direction = 1
 var speed = Vector2()
 var velocity = Vector2()
 
-const MAX_SPEED = 700
+const MAX_SPEED = 600
 const ACCELERATION = 2600
 const DECELERATION = 5000
 
