@@ -19,7 +19,6 @@ var velocity = Vector2()
 
 const DASH_SPEED = 5000
 const MAX_SPEED = 600
-const DASH_RANGE = 10
 const ACCELERATION = 2600
 const DECELERATION = 5000
 
@@ -79,13 +78,11 @@ func _process(delta):
 		
 	if Input.is_action_pressed("dash") && isDashing == false && canDash == true:
 		if(sprite_node.is_flipped_h()):
-			#TODO
-			# Fix the to left side
-			speed.x -= DASH_RANGE * ACCELERATION
-			speed.x = clamp(speed.x, 0, DASH_SPEED)
+			speed.x -= DASH_SPEED
+			velocity = Vector2(speed.x * delta * 1, speed.y * delta)
 		elif(!sprite_node.is_flipped_h()):
-			speed.x += DASH_RANGE * ACCELERATION
-			speed.x = clamp(speed.x, 0, DASH_SPEED)
+			speed.x += DASH_SPEED
+			velocity = Vector2(speed.x * delta * 1, speed.y * delta)
 		isDashing = true
 		canDash = false
 		timer_DashCD.start()
@@ -99,13 +96,13 @@ func _process(delta):
 		else:
 			speed.x -= DECELERATION * delta
 		speed.x = clamp(speed.x, 0, MAX_SPEED)
-	
 		speed.y += GRAVITY * delta
 		if speed.y > MAX_FALL_SPEED:
 			speed.y = MAX_FALL_SPEED
 	
 	label.set_text(str(timer_DashCD.get_time_left()))
-	velocity = Vector2(speed.x * delta * direction, speed.y * delta)
+	if(!isDashing):
+		velocity = Vector2(speed.x * delta * direction, speed.y * delta)
 	var movement_remainder = move(velocity)
 	
 	if is_colliding():

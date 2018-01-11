@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="6" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
-	<ext_resource path="res://Textures/Sprites/player_placeholder.tex" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://Textures/Sprites/ground_placeholder.tex" type="Texture" index="0"></ext_resource>
+	<ext_resource path="res://Textures/Sprites/player_placeholder.tex" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://Scripts/Player.gd" type="Script" index="1"></ext_resource>
 	<resource type="RectangleShape2D" path="local://2">
 		<real name="custom_solver_bias"> 0 </real>
@@ -99,7 +99,7 @@
 					<string> "_edit_lock_" </string>
 					<bool> True </bool>
 				</dictionary>
-				<vector2> 521.051, 486.256 </vector2>
+				<vector2> 678.69, 494.372 </vector2>
 				<resource  resource_type="Shape2D" path="local://3">  </resource>
 				<matrix32> 3, -0, 0, 3, 0, 0 </matrix32>
 				<real> 0.08 </real>
@@ -121,7 +121,7 @@
 				<real> -50 </real>
 				<real> 31 </real>
 				<real> -35 </real>
-				<string> "Rafiz" </string>
+				<string> "Placeholder" </string>
 				<int> -1 </int>
 			</array>
 			<string> "version" </string>
