@@ -220,8 +220,8 @@
 				<vector2> 8991, 104 </vector2>
 				<vector2> 2.84644, 2.55859 </vector2>
 				<vector2> 10028, 70 </vector2>
-				<vector2> 660.591, 460.436 </vector2>
-				<vector2> 1.01032, 1.9889 </vector2>
+				<vector2> 654.443, 460.436 </vector2>
+				<vector2> 0.818206, 1.9889 </vector2>
 				<resource  resource_type="Shape2D" path="local://1">  </resource>
 				<matrix32> 1, -0, 0, 1, 0, 0 </matrix32>
 				<resource  external="4">  </resource>

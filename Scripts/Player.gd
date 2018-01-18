@@ -13,6 +13,7 @@ var dash_cooldown = 5
 var isDashing = false
 var canDash = true
 var isDucked = false
+var canDuck = true
 
 var input_direction = 0
 var direction = 1
@@ -67,6 +68,10 @@ func _input(event):
 	if jump_count < MAX_JUMP_COUNT and Input.is_action_pressed("jump"):
 		speed.y = -JUMP_FORCE
 		jump_count += 1
+		if(isDucked):
+			animation_node.play_backwards("player_duck")
+			canDuck = false
+			isDucked = false
 
 func _process(delta):
 	if input_direction:
@@ -74,7 +79,7 @@ func _process(delta):
 
 	# Cant Jump when ducked
 	# Try moving into seperat Function (like jump)
-	if Input.is_action_pressed("duck") and !isDucked:
+	if Input.is_action_pressed("duck") and !isDucked and canDuck:
 		animation_node.play("player_duck")
 		isDucked = true
 	if !Input.is_action_pressed("duck") and isDucked:
@@ -127,3 +132,4 @@ func _process(delta):
 		
 		if normal == Vector2(0, -1):
 			jump_count = 0
+			canDuck = true
