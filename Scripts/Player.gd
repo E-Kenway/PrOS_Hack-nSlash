@@ -32,20 +32,16 @@ const MAX_FALL_SPEED = 1400
 var jump_count = 0
 const MAX_JUMP_COUNT = 2
 
-var scale
-var oldScale
-var colTransform
-
-
 func _ready():
 	set_process(true)
 	set_process_input(true)
+	# Sprite of the player
 	sprite_node = get_node("Sprite")
 	# How long the Player is dashing
 	timer_DashTime = Timer.new()
 	timer_DashTime.set_one_shot(true)
 	timer_DashTime.set_wait_time(dash_time)
-	timer_DashTime.connect("timeout", self, "on_timeout_complete")
+	timer_DashTime.connect("timeout", self, "Dash_on_timeout_complete")
 	add_child(timer_DashTime)
 	# Cooldown for dash
 	timer_DashCD = Timer.new()
@@ -61,14 +57,15 @@ func _ready():
 	animation_node = parent_node.get_node("AnimationPlayer")
 
  # Whem the timers timeout completes
-func on_timeout_complete():
+func Dash_on_timeout_complete():
 	isDashing = false
 
 func CD_on_timeout_complete():
 	canDash = true
 
 func _input(event):
-	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed("jump"):
+	if jump_count < MAX_JUMP_COUNT and Input.is_action_pressed("jump"):
+		print("jumping event triggered")
 		speed.y = -JUMP_FORCE
 		jump_count += 1
 
