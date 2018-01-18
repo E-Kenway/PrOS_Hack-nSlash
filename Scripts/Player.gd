@@ -72,7 +72,7 @@ func _input(event):
 func _process(delta):
 	if input_direction:
 		direction = input_direction
-	
+
 	# Cant Jump when ducked
 	# Try moving into seperat Function (like jump)
 	if Input.is_action_pressed("duck") and !isDucked:
