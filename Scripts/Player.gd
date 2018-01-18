@@ -65,7 +65,6 @@ func CD_on_timeout_complete():
 
 func _input(event):
 	if jump_count < MAX_JUMP_COUNT and Input.is_action_pressed("jump"):
-		print("jumping event triggered")
 		speed.y = -JUMP_FORCE
 		jump_count += 1
 
