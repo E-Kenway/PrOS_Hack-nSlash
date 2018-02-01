@@ -5,6 +5,7 @@ var lbl_Cooldown = null
 var label = null
 var parent_node = null
 var animation_node = null
+var area2d_node = null
 
 var timer_DashTime = null
 var timer_DashCD = null
@@ -14,6 +15,7 @@ var isDashing = false
 var canDash = true
 var isDucked = false
 var canDuck = true
+var startPos
 
 var input_direction = 0
 var direction = 1
@@ -56,6 +58,10 @@ func _ready():
 	# Animation
 	parent_node = get_parent()
 	animation_node = parent_node.get_node("AnimationPlayer")
+	#Area2D
+	area2d_node = parent_node.get_node("Area2D")
+	#Player starting pos
+	startPos = get_pos()
 
  # Whem the timers timeout completes
 func Dash_on_timeout_complete():
@@ -124,6 +130,9 @@ func _process(delta):
 		velocity = Vector2(speed.x * delta * direction, speed.y * delta)
 	var movement_remainder = move(velocity)
 
+	if(area2d_node.get_pos().y < get_pos().y):
+		set_pos(startPos)
+	
 	if is_colliding():
 		var normal = get_collision_normal()
 		var final_movement = normal.slide(movement_remainder)
