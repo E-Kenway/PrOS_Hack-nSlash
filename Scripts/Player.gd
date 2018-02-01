@@ -130,7 +130,7 @@ func _process(delta):
 		velocity = Vector2(speed.x * delta * direction, speed.y * delta)
 	var movement_remainder = move(velocity)
 
-	if(area2d_node.get_pos().y < get_pos().y):
+	if(area2d_node.get_pos().y < get_pos().y or Input.is_action_pressed("respawn")):
 		set_pos(startPos)
 	
 	if is_colliding():

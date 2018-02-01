@@ -225,8 +225,8 @@
 				<vector2> 8991, 104 </vector2>
 				<vector2> 2.84644, 2.55859 </vector2>
 				<vector2> 10028, 70 </vector2>
-				<vector2> 264.017, 479.272 </vector2>
-				<vector2> 0.818206, 1.9889 </vector2>
+				<vector2> 261.426, 479.272 </vector2>
+				<vector2> 0.929361, 1.9889 </vector2>
 				<resource  resource_type="Shape2D" path="local://1">  </resource>
 				<matrix32> 1, 0, 0, 1, 0, 0 </matrix32>
 				<resource  external="4">  </resource>
@@ -263,7 +263,7 @@
 				<array  len="0" shared="false">
 				</array>
 				<string> "" </string>
-				<vector2> 221.909, 1182.07 </vector2>
+				<vector2> 51.5526, 885.233 </vector2>
 				<vector2> 6.86999, 1.52301 </vector2>
 				<vector2> 0, 1 </vector2>
 				<real> 98 </real>
