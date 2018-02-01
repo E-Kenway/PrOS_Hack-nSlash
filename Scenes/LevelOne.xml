@@ -7,10 +7,11 @@
 	<ext_resource path="res://Textures/Landscape/texture_cloud_3.png" type="Texture" index="3"></ext_resource>
 	<ext_resource path="res://Scripts/EnemyAI.gd" type="Script" index="4"></ext_resource>
 	<ext_resource path="res://TileSet/TileMap.xml" type="TileSet" index="0"></ext_resource>
+	<ext_resource path="res://Animations/player_duck.tres.anm" type="Animation" index="6"></ext_resource>
+	<ext_resource path="res://Scripts/Player.gd" type="Script" index="4"></ext_resource>
 	<resource type="RectangleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2 name="extents"> 32, 32 </vector2>
-
 	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
@@ -141,7 +142,7 @@
 				<resource  external="2">  </resource>
 				<vector2> 1587.25, 274.75 </vector2>
 				<vector2> 2.22656, 2.26562 </vector2>
-				<vector2> 451, 291 </vector2>
+				<vector2> 452.67, 292.67 </vector2>
 				<vector2> 2.5, 4.125 </vector2>
 				<resource  external="3">  </resource>
 				<vector2> 897.25, 149.5 </vector2>
@@ -216,7 +217,7 @@
 				<vector2> 0.164063, 0.1875 </vector2>
 				<vector2> 141, 411 </vector2>
 				<dictionary  shared="false">
-					<string> "_edit_group_" </string>
+					<string> "_edit_lock_" </string>
 					<bool> True </bool>
 				</dictionary>
 			</array>
