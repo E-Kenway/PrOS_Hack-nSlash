@@ -36,7 +36,7 @@ var jump_count = 0
 const MAX_JUMP_COUNT = 2
 
 func _ready():
-	set_process(true)
+	set_fixed_process(true)
 	set_process_input(true)
 	# Sprite of the player
 	sprite_node = get_node("Sprite")
@@ -79,7 +79,7 @@ func _input(event):
 			canDuck = false
 			isDucked = false
 
-func _process(delta):
+func _fixed_process(delta):
 	if input_direction:
 		direction = input_direction
 
