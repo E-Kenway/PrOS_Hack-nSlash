@@ -128,3 +128,4 @@ func _process(delta):
 		
 		if normal == Vector2(0, -1):
 			jump_count = 0
+
