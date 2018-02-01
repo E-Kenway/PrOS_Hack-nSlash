@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="TileSet" subresource_count="19" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
-	<ext_resource path="res://Textures/Landscape/texture_gras.png" type="Texture" index="0"></ext_resource>
+<resource_file type="TileSet" subresource_count="27" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
 	<ext_resource path="res://Textures/Landscape/texture_cloud_2.png" type="Texture" index="3"></ext_resource>
-	<ext_resource path="res://Textures/Landscape/texture_stone_top_1.png" type="Texture" index="11"></ext_resource>
-	<ext_resource path="res://Textures/Landscape/texture_cloud_1.png" type="Texture" index="2"></ext_resource>
-	<ext_resource path="res://Textures/Landscape/texture_dirt.png" type="Texture" index="7"></ext_resource>
-	<ext_resource path="res://Textures/Landscape/texture_gras_top.png" type="Texture" index="8"></ext_resource>
-	<ext_resource path="res://Textures/Landscape/texture_cloud_3.png" type="Texture" index="4"></ext_resource>
-	<ext_resource path="res://Textures/Landscape/texture_gras_platform_right.png" type="Texture" index="6"></ext_resource>
-	<ext_resource path="res://Textures/Landscape/texture_stone_top_2.png" type="Texture" index="12"></ext_resource>
-	<ext_resource path="res://Textures/Landscape/texture_background_sky.png" type="Texture" index="9"></ext_resource>
-	<ext_resource path="res://Textures/Landscape/texture_gras_platform_middle.png" type="Texture" index="5"></ext_resource>
-	<ext_resource path="res://Textures/Landscape/texture_water_basic.png" type="Texture" index="10"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/texture_gras.png" type="Texture" index="0"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/texture_gras_top.png" type="Texture" index="16"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/texture_stone_top_1.png" type="Texture" index="19"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/texture_gras_platform_right.png" type="Texture" index="14"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/texture_stone_top_2.png" type="Texture" index="20"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/texture_background_sky.png" type="Texture" index="17"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/texture_gras_platform_middle.png" type="Texture" index="12"></ext_resource>
 	<ext_resource path="res://Textures/Landscape/texture_gras_platform_left.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/BodenUnten.png" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/texture_cloud_1.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/texture_cloud_3.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/texture_dirt.png" type="Texture" index="15"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/texture_water_basic.png" type="Texture" index="18"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/HoehleEingang.png" type="Texture" index="7"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/HoehleEingang2.png" type="Texture" index="10"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/Hoehle.png" type="Texture" index="8"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/Boden.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/Lava.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/HoehlenEingang3.png" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://Textures/Landscape/LavaRot.png" type="Texture" index="13"></ext_resource>
 	<resource type="RectangleShape2D" path="local://6">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2 name="extents"> 32.3805, 32.0013 </vector2>
@@ -23,6 +31,11 @@
 		<vector2 name="extents"> 32, 27 </vector2>
 
 	</resource>
+	<resource type="RectangleShape2D" path="local://5">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 32, 32 </vector2>
+
+	</resource>
 	<resource type="RectangleShape2D" path="local://3">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2 name="extents"> 32, 27 </vector2>
@@ -31,11 +44,6 @@
 	<resource type="RectangleShape2D" path="local://4">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2 name="extents"> 32, 27 </vector2>
-
-	</resource>
-	<resource type="RectangleShape2D" path="local://5">
-		<real name="custom_solver_bias"> 0 </real>
-		<vector2 name="extents"> 32, 32 </vector2>
 
 	</resource>
 	<main_resource>
@@ -66,7 +74,7 @@
 		<vector2 name="1/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="1/one_way_collision_max_depth"> 0 </real>
 		<string name="2/name"> "gras_platform_middle" </string>
-		<resource name="2/texture" external="5">  </resource>
+		<resource name="2/texture" external="12">  </resource>
 		<vector2 name="2/tex_offset"> 0, 0 </vector2>
 		<resource name="2/material"></resource>		<color name="2/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="2/region"> 0, 0, 64, 64 </rect2>
@@ -79,7 +87,7 @@
 		<vector2 name="2/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="2/one_way_collision_max_depth"> 0 </real>
 		<string name="3/name"> "gras_platform_right" </string>
-		<resource name="3/texture" external="6">  </resource>
+		<resource name="3/texture" external="14">  </resource>
 		<vector2 name="3/tex_offset"> 0, 0 </vector2>
 		<resource name="3/material"></resource>		<color name="3/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="3/region"> 0, 0, 64, 64 </rect2>
@@ -92,7 +100,7 @@
 		<vector2 name="3/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="3/one_way_collision_max_depth"> 0 </real>
 		<string name="4/name"> "dirt" </string>
-		<resource name="4/texture" external="7">  </resource>
+		<resource name="4/texture" external="15">  </resource>
 		<vector2 name="4/tex_offset"> 0, 0 </vector2>
 		<resource name="4/material"></resource>		<color name="4/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="4/region"> 0, 0, 64, 64 </rect2>
@@ -105,7 +113,7 @@
 		<vector2 name="4/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="4/one_way_collision_max_depth"> 0 </real>
 		<string name="5/name"> "background_gras_top" </string>
-		<resource name="5/texture" external="8">  </resource>
+		<resource name="5/texture" external="16">  </resource>
 		<vector2 name="5/tex_offset"> 0, 0 </vector2>
 		<resource name="5/material"></resource>		<color name="5/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="5/region"> 0, 0, 64, 64 </rect2>
@@ -117,10 +125,10 @@
 		<vector2 name="5/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="5/one_way_collision_max_depth"> 0 </real>
 		<string name="6/name"> "background_sky" </string>
-		<resource name="6/texture" external="9">  </resource>
+		<resource name="6/texture" external="17">  </resource>
 		<vector2 name="6/tex_offset"> 0, 0 </vector2>
 		<resource name="6/material"></resource>		<color name="6/modulate"> 1, 1, 1, 1 </color>
-		<rect2 name="6/region"> 0, 0, 192, 192 </rect2>
+		<rect2 name="6/region"> 0, 0, 128, 128 </rect2>
 		<vector2 name="6/occluder_offset"> 64, 64 </vector2>
 		<resource name="6/occluder"></resource>		<vector2 name="6/navigation_offset"> 64, 64 </vector2>
 		<resource name="6/navigation"></resource>		<vector2 name="6/shape_offset"> 0, 0 </vector2>
@@ -129,7 +137,7 @@
 		<vector2 name="6/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="6/one_way_collision_max_depth"> 0 </real>
 		<string name="7/name"> "water" </string>
-		<resource name="7/texture" external="10">  </resource>
+		<resource name="7/texture" external="18">  </resource>
 		<vector2 name="7/tex_offset"> 0, 0 </vector2>
 		<resource name="7/material"></resource>		<color name="7/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="7/region"> 0, 0, 64, 64 </rect2>
@@ -141,7 +149,7 @@
 		<vector2 name="7/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="7/one_way_collision_max_depth"> 0 </real>
 		<string name="8/name"> "stone_top_1" </string>
-		<resource name="8/texture" external="11">  </resource>
+		<resource name="8/texture" external="19">  </resource>
 		<vector2 name="8/tex_offset"> 0, 0 </vector2>
 		<resource name="8/material"></resource>		<color name="8/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="8/region"> 0, 0, 64, 64 </rect2>
@@ -153,7 +161,7 @@
 		<vector2 name="8/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="8/one_way_collision_max_depth"> 0 </real>
 		<string name="9/name"> "stone_top_2" </string>
-		<resource name="9/texture" external="12">  </resource>
+		<resource name="9/texture" external="20">  </resource>
 		<vector2 name="9/tex_offset"> 0, 0 </vector2>
 		<resource name="9/material"></resource>		<color name="9/modulate"> 1, 1, 1, 1 </color>
 		<rect2 name="9/region"> 0, 0, 64, 64 </rect2>
@@ -200,6 +208,104 @@
 		</array>
 		<vector2 name="12/one_way_collision_direction"> 0, 0 </vector2>
 		<real name="12/one_way_collision_max_depth"> 0 </real>
+		<string name="13/name"> "Boden" </string>
+		<resource name="13/texture" external="5">  </resource>
+		<vector2 name="13/tex_offset"> 0, 0 </vector2>
+		<resource name="13/material"></resource>		<color name="13/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="13/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="13/occluder_offset"> 32, 32 </vector2>
+		<resource name="13/occluder"></resource>		<vector2 name="13/navigation_offset"> 32, 32 </vector2>
+		<resource name="13/navigation"></resource>		<vector2 name="13/shape_offset"> 32, 32 </vector2>
+		<array name="13/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://5">  </resource>
+		</array>
+		<vector2 name="13/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="13/one_way_collision_max_depth"> 0 </real>
+		<string name="14/name"> "BodenUnten" </string>
+		<resource name="14/texture" external="6">  </resource>
+		<vector2 name="14/tex_offset"> 0, 0 </vector2>
+		<resource name="14/material"></resource>		<color name="14/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="14/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="14/occluder_offset"> 32, 32 </vector2>
+		<resource name="14/occluder"></resource>		<vector2 name="14/navigation_offset"> 32, 32 </vector2>
+		<resource name="14/navigation"></resource>		<vector2 name="14/shape_offset"> 32, 32 </vector2>
+		<array name="14/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://5">  </resource>
+		</array>
+		<vector2 name="14/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="14/one_way_collision_max_depth"> 0 </real>
+		<string name="15/name"> "HöhleEingang" </string>
+		<resource name="15/texture" external="7">  </resource>
+		<vector2 name="15/tex_offset"> 0, 0 </vector2>
+		<resource name="15/material"></resource>		<color name="15/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="15/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="15/occluder_offset"> 32, 32 </vector2>
+		<resource name="15/occluder"></resource>		<vector2 name="15/navigation_offset"> 32, 32 </vector2>
+		<resource name="15/navigation"></resource>		<vector2 name="15/shape_offset"> 0, 0 </vector2>
+		<array name="15/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="15/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="15/one_way_collision_max_depth"> 0 </real>
+		<string name="16/name"> "Höhle" </string>
+		<resource name="16/texture" external="8">  </resource>
+		<vector2 name="16/tex_offset"> 0, 0 </vector2>
+		<resource name="16/material"></resource>		<color name="16/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="16/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="16/occluder_offset"> 32, 32 </vector2>
+		<resource name="16/occluder"></resource>		<vector2 name="16/navigation_offset"> 32, 32 </vector2>
+		<resource name="16/navigation"></resource>		<vector2 name="16/shape_offset"> 0, 0 </vector2>
+		<array name="16/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="16/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="16/one_way_collision_max_depth"> 0 </real>
+		<string name="17/name"> "HöhleEingang1" </string>
+		<resource name="17/texture" external="9">  </resource>
+		<vector2 name="17/tex_offset"> 0, 0 </vector2>
+		<resource name="17/material"></resource>		<color name="17/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="17/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="17/occluder_offset"> 32, 32 </vector2>
+		<resource name="17/occluder"></resource>		<vector2 name="17/navigation_offset"> 32, 32 </vector2>
+		<resource name="17/navigation"></resource>		<vector2 name="17/shape_offset"> 0, 0 </vector2>
+		<array name="17/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="17/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="17/one_way_collision_max_depth"> 0 </real>
+		<string name="18/name"> "HöhleEingang2" </string>
+		<resource name="18/texture" external="10">  </resource>
+		<vector2 name="18/tex_offset"> 0, 0 </vector2>
+		<resource name="18/material"></resource>		<color name="18/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="18/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="18/occluder_offset"> 32, 32 </vector2>
+		<resource name="18/occluder"></resource>		<vector2 name="18/navigation_offset"> 32, 32 </vector2>
+		<resource name="18/navigation"></resource>		<vector2 name="18/shape_offset"> 0, 0 </vector2>
+		<array name="18/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="18/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="18/one_way_collision_max_depth"> 0 </real>
+		<string name="19/name"> "Lava" </string>
+		<resource name="19/texture" external="11">  </resource>
+		<vector2 name="19/tex_offset"> 0, 0 </vector2>
+		<resource name="19/material"></resource>		<color name="19/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="19/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="19/occluder_offset"> 32, 32 </vector2>
+		<resource name="19/occluder"></resource>		<vector2 name="19/navigation_offset"> 32, 32 </vector2>
+		<resource name="19/navigation"></resource>		<vector2 name="19/shape_offset"> 0, 0 </vector2>
+		<array name="19/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="19/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="19/one_way_collision_max_depth"> 0 </real>
+		<string name="20/name"> "Lava2" </string>
+		<resource name="20/texture" external="13">  </resource>
+		<vector2 name="20/tex_offset"> 0, 0 </vector2>
+		<resource name="20/material"></resource>		<color name="20/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="20/region"> 0, 0, 64, 64 </rect2>
+		<vector2 name="20/occluder_offset"> 32, 32 </vector2>
+		<resource name="20/occluder"></resource>		<vector2 name="20/navigation_offset"> 32, 32 </vector2>
+		<resource name="20/navigation"></resource>		<vector2 name="20/shape_offset"> 0, 0 </vector2>
+		<array name="20/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="20/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="20/one_way_collision_max_depth"> 0 </real>
 
 	</main_resource>
 </resource_file>
